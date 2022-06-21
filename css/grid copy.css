@@ -1,0 +1,116 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+} */
+body{
+    background-image: url(/img/fondo2.webp);
+}
+/* MAQUETACION INICIAL CON CSS GRID USANDO CLASES CON NOMBRES DE LAS ETIQUETAS SEMANTICAS DE HTML5 */
+.grid-container {
+    width: 90%;
+    max-width: 1000px; 
+    border: 10px solid black;
+    margin: auto;
+    padding: 10px;
+    /* font-size: 2em; */
+    line-height: 2em;
+    text-align: center; 
+    justify-content: center;
+
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, maxmin(1000px, 1fr));
+    grid-template-rows: repeat(3, auto-fill);
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "sidebar-1 contenido sidebar-2"
+    "footer1 footer2 footer3";
+    justify-content: center;
+    align-content: center;
+    
+}
+header {
+    background-color: aqua;
+    grid-template-rows: repeat(2, 1fr);
+    border-color: 5px solid black;
+    /* grid-column-start: header;
+    grid-column-end: header; */
+    /* modo 1 linea */
+    grid-area: header;
+}
+.h-fila1 {
+    background-color: rgb(191, 172, 172);
+}
+.h-fila2 {
+    background-color: rgb(98, 202, 215);
+}
+.h-fila1 >img {
+    float: left;
+    border-radius: 20px;
+}
+nav {
+    grid-area: nav;
+}
+nav ul {
+    list-style: none;
+}
+nav ul button {
+    background-color: brown;
+    border-radius: 10px;
+    width: 180px;
+    padding: 10px;
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px 0 10px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.grid-container .sidebar-1 {
+    background-color: rgb(190, 198, 227);
+    padding: 20px;
+    /* odo correcto pero muy largo */
+    /* 
+    grid-column-start: sidebar-1;
+    grid-column-end: sidebar-1;
+    grid-row-start: sidebar-1 ;
+    grid-row-end: sidebar-1 ; */
+
+    /* Modo breve en 1 linea */
+    grid-area: sidebar-1;
+}
+.grid-container .contenido {
+    background-color: rgb(190, 198, 227);
+    padding: 20px;
+    /* grid-column-start: header;
+    grid-column-end: header; */
+    /* modo 1 linea */
+    grid-area: contenido;
+}
+.grid-container .sidebar-2 {
+    background-color: rgb(190, 198, 227);
+    padding: 20px;
+    /* grid-column-start: header;
+    grid-column-end: header; */
+    /* modo 1 linea */
+    grid-area: sidebar-2;
+}
+.footer1 {
+    background-color: aqua;
+    grid-column: span 2;
+    text-align: start;
+    padding-left: 20px;
+    line-height: 1em;
+}
+.footer2 {
+    background-color:aqua;
+    line-height: 1em;
+    text-align: start;
+    padding-left: 30px;
+}
+
+

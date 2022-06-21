@@ -1,0 +1,57 @@
+body{
+    background-image: url(/img/fondo2.webp);
+}
+.grid-container {
+     width: 90%;
+    max-width: 1000px; 
+    border: 10px solid black;
+    margin: auto;
+    padding: 10px;
+    /* font-size: 2em; */
+    line-height: 2em;
+    text-align: center; 
+    justify-content: center;
+}
+header {
+    background-color: aqua;
+}
+.h-fila1 {
+    background-color: rgb(191, 172, 172);
+}
+.h-fila2 {
+    background-color: rgb(98, 202, 215);
+}
+.h-fila1 >img {
+    float: left;
+    border-radius: 20px;
+}
+nav ul {
+    list-style: none;
+}
+nav ul button {
+    background-color: brown;
+    border-radius: 10px;
+    width: 180px;
+    padding: 10px;
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px 0 10px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.footer1 {
+    background-color: aqua;
+    text-align: start;
+    padding-left: 20px;
+    line-height: 1em;
+}
+.footer2 {
+    background-color:aqua;
+    line-height: 1em;
+    text-align: start;
+    padding-left: 30px;
+}

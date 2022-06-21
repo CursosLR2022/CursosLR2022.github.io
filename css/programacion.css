@@ -1,0 +1,61 @@
+
+/* MAQUETACION INICIAL CON CSS GRID USANDO CLASES CON NOMBRES DE LAS ETIQUETAS SEMANTICAS DE HTML5 */
+.grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, maxmin(1000px, 1fr));
+    grid-template-rows: repeat(3, auto-fill);
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "sidebar-1 contenido sidebar-2"
+    "footer1 footer2 footer3";
+    justify-content: center;
+    align-content: center;    
+}
+header {    
+    grid-template-rows: repeat(2, 1fr);
+    border-color: 5px solid black;
+    /* grid-column-start: header;
+    grid-column-end: header; */
+    /* modo 1 linea */
+    grid-area: header;
+}
+nav {
+    grid-area: nav;
+}
+.grid-container .sidebar-1 {
+    background-color: rgb(190, 198, 227);
+    padding: 20px;
+    /* odo correcto pero muy largo */
+    /* 
+    grid-column-start: sidebar-1;
+    grid-column-end: sidebar-1;
+    grid-row-start: sidebar-1 ;
+    grid-row-end: sidebar-1 ; */
+
+    /* Modo breve en 1 linea */
+    grid-area: sidebar-1;
+}
+.grid-container .contenido {
+    background-color: rgb(190, 198, 227);
+    padding: 20px;
+    /* grid-column-start: header;
+    grid-column-end: header; */
+    /* modo 1 linea */
+    grid-area: contenido;
+}
+.grid-container .sidebar-2 {
+    background-color: rgb(190, 198, 227);
+    padding: 20px;
+    /* grid-column-start: header;
+    grid-column-end: header; */
+    /* modo 1 linea */
+    grid-area: sidebar-2;
+}
+.footer1 {
+    grid-column: span 2;
+}
+
+
+
